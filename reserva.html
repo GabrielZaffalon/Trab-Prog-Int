@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="quatos, hospedagem, hotel" />
+        <meta name="author" content="Gabriel Zaffalon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="imagex/png" href="./img/icon.ico" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Recanto de Natureza / RESERVA</title>
+    </head>
+    <body onload="showSlides(1)">
+        <header>
+            <img src="./img/logo/Logo-3.png" alt="Logo" id="logo" /> <br />
+            <nav>
+                <a href="index.html">INÍCIO</a>
+                <a href="hospedagem.html">HOSPEDAGEM</a>
+                <a href="reserva.html">RESERVA</a>
+            </nav>
+        </header>
+        <main class="main-reserva">
+            <h1>FAÇA SUA RESERVA AGORA!</h1>
+            <form action="POST" class="form-reserva">
+                <label for="name">Nome completo</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Nome Completo"
+                />
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="aaaaa@bbbb.ccc"
+                />
+
+                <label for="phone">Telefone</label>
+                <input
+                    type="phone"
+                    name="phone"
+                    id="phone"
+                    placeholder="(XX) XXXXX-XXXX"
+                />
+
+                <label for="quarto">Escolha de Quarto</label>
+                <select id="quarto" name="quarto">
+                    <option value="familia">Quarto Família</option>
+                    <option value="casal">Quarto Casal</option>
+                    <option value="solteiro">Quarto Solteiro</option>
+                </select>
+
+                <label for="entrada"> Data de Entrada</label>
+                <input
+                    type="date"
+                    id="entrada"
+                    name="entrada"
+                    placeholder="dd/mm/aaaa"
+                />
+
+                <label for="saida"> Data de Saída</label>
+                <input
+                    type="date"
+                    id="saida"
+                    name="saida"
+                    placeholder="dd/mm/aaaa"
+                />
+
+                <button
+                    type="button"
+                    onclick="alert('Reserva Feita com Sucesso!')"
+                    class="reserva-buttom"
+                >
+                    ENVIAR
+                </button>
+            </form>
+        </main>
+        <footer class="footer-reserva">
+            Todos Direitos Reservados à Gabriel Zaffalon
+        </footer>
+    </body>
+</html>

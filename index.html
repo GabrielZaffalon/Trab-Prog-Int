@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="serviço de hospedagem" />
+        <meta name="keywords" content="pousada, viagem, hotel" />
+        <meta name="author" content="Gabriel Zaffalon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="imagex/png" href="./img/icon.ico" />
+        <link rel="stylesheet" href="styles.css" />
+        <script language="Javascript">
+            var slideIndex = 1
+            showSlides(slideIndex)
+
+            // CONTROLES DE ANTES E DEPOIS
+            function plusSlides(n) {
+                showSlides((slideIndex += n))
+            }
+
+            // CONTROLE DE IMAGENS
+            function currentSlide(n) {
+                showSlides((slideIndex = n))
+            }
+
+            function showSlides(n) {
+                var i
+                var slides = document.getElementsByClassName('mySlides')
+                var dots = document.getElementsByClassName('dot')
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none'
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active', '')
+                }
+                slides[slideIndex - 1].style.display = 'block'
+                dots[slideIndex - 1].className += ' active'
+            }
+        </script>
+        <title>Recanto de Natureza / HOME</title>
+    </head>
+    <body onload="showSlides(1)">
+        <header>
+            <img src="./img/logo/Logo-3.png" alt="Logo" id="logo" /> <br />
+            <nav>
+                <a href="index.html">INÍCIO</a>
+                <a href="hospedagem.html">HOSPEDAGEM</a>
+                <a href="reserva.html">RESERVA</a>
+            </nav>
+        </header>
+        <main>
+            <section class="slides">
+                <div class="slideshow-container">
+                    <!-- IMAGENS -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="./img/slides/slide-1.png" />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="./img/slides/slide-2.png" />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="./img/slides/slide-3.png" />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="./img/slides/slide-4.png" />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="./img/slides/slide-5.png" />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="./img/slides/slide-6.png" />
+                    </div>
+
+                    <!-- ANTES E DEPOIS -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br />
+
+                <!-- PONTOS -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </section>
+            <section class="apresentação">
+                <h1>TUDO O QUE VOCÊ PRECISA</h1>
+                <p align="center">
+                    Oferecemos comodidades e serviços para que sua estadia no
+                    Recanto da Natureza seja prazerosa. Buscamos combinar
+                    conforto e praticidade para proporcionar a atenção e o
+                    conforto que você merece. Com acomodações impecáveis e uma
+                    equipe atenciosa, garantimos uma experiência prazerosa.
+                    Explore tudo o que oferecemos e reserve seu quarto.
+                </p>
+            </section>
+            <section class="imagens">
+                <img id="banner" src="./img/img1.png" />
+            </section>
+            <section class="mapa">
+                <h2>COMO NOS ENCONTRAR</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.9340213617033!2d-52.29441104873166!3d-31.772285420644995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ2JzIwLjIiUyA1MsKwMTcnMzIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1632170659796!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </section>
+        </main>
+        <footer>
+            <p>Endereço: Pelotas, RS - Estr. Passos dos Negros, 953</p>
+            <p>Número: 53 8135-3371</p>
+        </footer>
+    </body>
+</html>
